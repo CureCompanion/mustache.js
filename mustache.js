@@ -14,7 +14,7 @@
     global.Mustache = {};
     factory(global.Mustache); // script, wsh, asp
   }
-}(this, function mustacheFactory (mustache) {
+}(window, function mustacheFactory (mustache) {
 
   var objectToString = Object.prototype.toString;
   var isArray = Array.isArray || function isArrayPolyfill (object) {
@@ -629,3 +629,5 @@
 
   return mustache;
 }));
+
+export default Mustache = window.Mustache;
